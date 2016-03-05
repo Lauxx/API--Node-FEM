@@ -22,3 +22,4 @@ app.get('/data', function (req, res){
 app.listen(port); 
 console.log("cash money on " + port);
 
+//super simple example of a server using express

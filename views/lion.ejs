@@ -17,29 +17,53 @@
  			</div>
  		</div>
  	</div>
+ 	<div class = "container col-lg-6">
+ 	<table class="table table-bordered " id='lionTable'>
+ 		<thead>
+ 			<tr>
+ 				<th>Name</th>
+ 				<th>Age</th>
+ 				<th>Pride</th>
+ 				<th>Gender</th>
+ 			</tr>
+ 		</thead>
+ 		<tbody>
+ 			<% for(var i=0; i < lion.length; i++) {%>
+ 			<tr id='<%=lion[i]._id%>'>
+ 				<td><%=lion[i].name%></td>
+ 				<td><%=lion[i].age%></td>
+ 				<td><%=lion[i].pride%></td>
+ 				<td><%=lion[i].gender%></td>
+ 				<td><button class="btn btn-danger deleteLion">Delete</button></td>
+ 			</tr>
+ 			<% }; %>
+ 		</tbody>
+ 	</table>
+ 		
+ 	</div>
+ 	<br><br>
  	<div class="container">
  	<form action="" method="POST" role="form" class="col-md-6">
  		<legend>Create a lion</legend>
  	
  		<div class="form-group">
  			<label for="">Name</label>
- 			<input type="text" class="form-control" id="" placeholder="Name">
+ 			<input type="text" class="form-control" id="name" placeholder="Name">
  			<label for="">Age</label>
- 			<input type="text" class="form-control" id="" placeholder="Age">
+ 			<input type="text" class="form-control" id="age" placeholder="Age">
  			<label for="">Pride</label>
- 			<input type="text" class="form-control" id="" placeholder="Pride">
+ 			<input type="text" class="form-control" id="pride" placeholder="Pride">
  			<label for="">Gender</label>
- 			<input type="text" class="form-control" id="" placeholder="Gender">
+ 			<input type="text" class="form-control" id="gender" placeholder="Gender">
  		</div>
  	
  		
  	
- 		<button type="submit" class="btn btn-primary">Submit</button>
+ 		<button type="submit" class="btn btn-primary" id='addLion'>Add My Lion</button>
  	</form>
  	</div>
-
-
-
+ 	
+ 	
 
 
 
